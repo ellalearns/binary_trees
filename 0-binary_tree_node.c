@@ -8,9 +8,9 @@
 */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-    binary_tree_t *newNode;
+    binary_tree_t *newNode = NULL;
 
-    if (!newNode)
+    if (newNode != NULL)
     {
         return (NULL);
     }

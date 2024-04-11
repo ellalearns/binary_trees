@@ -7,24 +7,24 @@
 */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-    int is_perfect = 0;
+int is_perfect = 0;
 
-    if (tree == NULL)
-    {
-        return (0);
-    }
+if (tree == NULL)
+{
+return (0);
+}
 
-    if (tree->left == NULL && tree->right == NULL)
-    {
-        return (1);
-    }
+if (tree->left == NULL && tree->right == NULL)
+{
+return (1);
+}
 
-    if (binary_tree_is_full(tree) == 1 && binary_tree_balance(tree) == 0)
-    {
-        is_perfect = 1;
-    }
+if (binary_tree_is_full(tree) == 1 && binary_tree_balance(tree) == 0)
+{
+is_perfect = 1;
+}
 
-    return (is_perfect);
+return (is_perfect);
 }
 
 
@@ -35,28 +35,28 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-    int is_full = 1;
+int is_full = 1;
 
-    if (tree == NULL)
-    {
-        return (0);
-    }
+if (tree == NULL)
+{
+return (0);
+}
 
-    if (tree->left == NULL && tree->right == NULL)
-    {
-        return (is_full);
-    }
+if (tree->left == NULL && tree->right == NULL)
+{
+return (is_full);
+}
 
-    if (tree->left && tree->right)
-    {
-        is_full = binary_tree_is_full(tree->left) \
-        && binary_tree_is_full(tree->right);
-        return (is_full);
-    }
+if (tree->left && tree->right)
+{
+is_full = binary_tree_is_full(tree->left) \
+&& binary_tree_is_full(tree->right);
+return (is_full);
+}
 
-    is_full = 0;
+is_full = 0;
 
-    return (is_full);
+return (is_full);
 }
 
 
@@ -67,36 +67,36 @@ int binary_tree_is_full(const binary_tree_t *tree)
 */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-    int left_height = 0;
-    int right_height = 0;
-    int balance = 0;
+int left_height = 0;
+int right_height = 0;
+int balance = 0;
 
-    if (tree == NULL)
-    {
-        return (0);
-    }
+if (tree == NULL)
+{
+return (0);
+}
 
-    if (tree->left)
-    {
-        left_height = (int) binary_tree_height(tree->left);
-    }
-    else
-    {
-        left_height = -1;
-    }
+if (tree->left)
+{
+left_height = (int) binary_tree_height(tree->left);
+}
+else
+{
+left_height = -1;
+}
 
-    if (tree->right)
-    {
-        right_height = (int) binary_tree_height(tree->right);
-    }
-    else
-    {
-        right_height = -1;
-    }
+if (tree->right)
+{
+right_height = (int) binary_tree_height(tree->right);
+}
+else
+{
+right_height = -1;
+}
 
-    balance = left_height - right_height;
+balance = left_height - right_height;
 
-    return (balance);
+return (balance);
 }
 
 

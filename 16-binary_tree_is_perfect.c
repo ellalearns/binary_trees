@@ -49,8 +49,7 @@ return (is_full);
 
 if (tree->left && tree->right)
 {
-is_full = binary_tree_is_full(tree->left) \
-&& binary_tree_is_full(tree->right);
+is_full = binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right);
 return (is_full);
 }
 

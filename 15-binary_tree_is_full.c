@@ -31,9 +31,8 @@ int binary_tree_is_full(const binary_tree_t *tree)
 
     if (is_full_left == 1 && is_full_right == 1)
     {
-        if (is_full == 1)
-        {
-            return (1);
-        }
+        is_full = 1;
     }
+
+    return (1);
 }
